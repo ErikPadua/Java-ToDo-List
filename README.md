@@ -1,0 +1,21 @@
+# ToDo List
+The **ToDo List** is a simple task management program that allows you to **create, view, update, and delete tasks** to stay organized.
+
+It follows the **Kanban methodology** for task status management with three stages: **ToDo, Doing, Done**.
+
+
+## Main File
+```
+    src/Application
+```
+
+## How to Run
+#### 1. Compile the program:
+
+```
+    javac Application.java
+```
+#### 2. Run the program:
+```
+    java Application
+```
