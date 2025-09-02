@@ -10,7 +10,9 @@ public class Application {
         int choice;
 
         do {
+            taskController.alertTask();
             choice = menu();
+
             switch (choice) {
                 case 1:
                     taskController.addTaskToList();

@@ -22,7 +22,7 @@ public class TaskController {
             System.out.print("\t- Enter task category: ");
             String category = input.nextLine();
 
-            System.out.print("\t- (optional) Enter task end date (dd/MM/yyyy): ");
+            System.out.print("\t- (optional) Enter task end date ( dd/MM/yyyy:HH:mm:ss ): ");
             String endDate = input.nextLine();
 
             System.out.print("\t- Enter task priority (1 - 5): ");
@@ -104,7 +104,7 @@ public class TaskController {
                 String category = input.nextLine();
                 if (!category.isEmpty()) task.setCategory(category);
 
-                System.out.print("\t- Enter new task end date (dd/MM/yyyy) (Skip do not change): ");
+                System.out.print("\t- Enter new task end date ( dd/MM/yyyy:HH:mm:ss ) (Skip do not change): ");
                 String endDate = input.nextLine();
                 if (!endDate.isEmpty()) task.setEndDate(endDate);
 
@@ -127,5 +127,18 @@ public class TaskController {
         int id = input.nextInt();
 
         tasks.remove(id);
+    }
+
+    public void alertTask() {
+        System.out.println();
+
+        for (Map.Entry<Integer, Task> entry : tasks.entrySet()) {
+            if(entry.getValue().getEndDate() != null){
+                if (entry.getValue().getEndDate().getTime() > new Date().getTime() && (entry.getValue().getEndDate().getTime() - 1000 * 60 * 60 * 2) < new Date().getTime()) {
+                    System.out.println("\t[Alert] Task: " + entry.getKey() + " is close to the due date!");
+                }
+            }
+        }
+
     }
 }

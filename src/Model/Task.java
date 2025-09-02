@@ -26,11 +26,11 @@ public class Task {
         }
 
         if (!endDate.isEmpty()) {
-            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy:HH:mm:ss");
             try {
                 this.endDate = format.parse(endDate);
             } catch (ParseException e) {
-                System.out.println("Invalid date format try this format - ( dd/MM/yyyy )");
+                System.out.println("Invalid date format try this format - ( dd/MM/yyyy:HH:mm:ss )");
                 throw new IllegalArgumentException();
             }
         } else {
@@ -72,11 +72,11 @@ public class Task {
     }
 
     public void setEndDate(String endDate) throws IllegalArgumentException {
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy:HH:mm:ss");
         try {
             this.endDate = format.parse(endDate);
         } catch (ParseException e) {
-            System.out.println("Invalid date format try this format - ( dd/MM/yyyy )");
+            System.out.println("Invalid date format try this format - ( dd/MM/yyyy:HH:mm:ss )");
             throw new IllegalArgumentException();
         }
     }
