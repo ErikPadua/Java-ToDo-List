@@ -22,3 +22,6 @@ It follows the **Kanban methodology** for task status management with three stag
 
 ## How Status Works
 When creating a task, its status is **automatically** set to **ToDo**. The status can later be updated to **Doing** or **Done** by editing the task.
+
+## How Alerts Works
+Tasks with an **assigned due date** will generate a menu alert exactly **two hours prior to the deadline**. The alert will display the corresponding **task ID** to indicate which task is approaching its due time.
