@@ -19,3 +19,6 @@ It follows the **Kanban methodology** for task status management with three stag
 ```
     java Application
 ```
+
+## How Status Works
+When creating a task, its status is **automatically** set to **ToDo**. The status can later be updated to **Doing** or **Done** by editing the task.
