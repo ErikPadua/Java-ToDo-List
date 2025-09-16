@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="adicionar_tarefa" id="adicionar_tarefa">
+      Adicionar Tarefa
+    </button>
+
+    <div class="status">
+      <div class="coluna_status" id="todo">
+        <h2>Todo</h2>
+        <div class="lista_tarefas_todo"></div>
+      </div>
+
+      <div class="coluna_status" id="doing">
+        <h2>Doing</h2>
+        <div class="lista_tarefas_doing"></div>
+      </div>
+
+      <div class="coluna_status" id="done">
+        <h2>Done</h2>
+        <div class="lista_tarefas_done"></div>
+      </div>
+    </div>
+
+    <div id="formulario" class="formulario">
+      <form id="formulario_tarefa">
+        <h2>Nova Tarefa</h2>
+        <label for="nome_tarefa">Nome</label>
+        <input type="text" id="nome_tarefa" required />
+
+        <label for="desc_tarefa">Descrição</label>
+        <textarea id="desc_tarefa" rows="4" required></textarea>
+
+        <label for="prioridade_tarefa">Prioridade</label>
+        <select id="prioridade_tarefa" required>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <div class="botoes_formulario">
+          <button type="submit" id="adicionar">Adicionar</button>
+          <button type="button" id="fechar_formulario">Voltar</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="mostrar_tarefa" class="dados_tarefa">
+      <div class="mostrar_tarefa">
+        <h3 id="nome_tarefa_mostrar"></h3>
+        <p>
+          <strong>Descrição:</strong> <span id="desc_tarefa_mostrar"></span>
+        </p>
+        <p>
+          <strong>Prioridade:</strong>
+          <span id="prioridade_tarefa_mostrar"></span>
+        </p>
+        <div class="mostrar_tarefa_botoes">
+          <button id="mover_Todo">Mover para Todo</button>
+          <button id="mover_Doing">Mover para Doing</button>
+          <button id="mover_Done">Mover para Done</button>
+          <button id="editar_Tarefa">Editar</button>
+          <button id="deletar_Tarefa">Deletar</button>
+          <button id="fechar_mostrar_tarefa">Voltar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
